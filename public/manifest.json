@@ -1,0 +1,27 @@
+{
+  "name": "Xaonic - Expert Web Development Company",
+  "short_name": "Xaonic",
+  "description": "Expert web development company specializing in MVP, SaaS and Shopify app development. Transform your startup ideas into digital reality.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E0C0FC",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/cover-x.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
