@@ -40,7 +40,8 @@ export default function Header() {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '15px 20px'
+        paddingTop: '15px',
+        paddingBottom: '15px'
       }}>
         <a
           href="#home"
@@ -109,21 +110,28 @@ export default function Header() {
         <nav style={{
           display: 'flex',
           flexDirection: 'column',
-          backgroundColor: 'white',
+          backgroundColor: 'rgba(255, 255, 255, 0.98)',
+          backdropFilter: 'blur(10px)',
           padding: '20px',
-          borderTop: '1px solid #f0f0f0'
+          borderTop: '1px solid #f0f0f0',
+          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
         }}>
-          {navItems.map((item) => (
+          {navItems.map((item, index) => (
             <a
               key={item.name}
               href={item.href}
               style={{
                 textDecoration: 'none',
                 color: 'var(--color-black)',
-                padding: '10px 0',
-                borderBottom: '1px solid #f0f0f0'
+                padding: '15px 0',
+                borderBottom: index < navItems.length - 1 ? '1px solid #f0f0f0' : 'none',
+                fontSize: '1.1rem',
+                fontWeight: '500',
+                transition: 'color 0.3s ease'
               }}
               onClick={() => setIsMenuOpen(false)}
+              onTouchStart={(e) => e.target.style.color = 'var(--color-purple)'}
+              onTouchEnd={(e) => e.target.style.color = 'var(--color-black)'}
             >
               {item.name}
             </a>

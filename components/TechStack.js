@@ -91,22 +91,26 @@ export default function TechStack() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-          gap: '2rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+          gap: 'clamp(0.8rem, 3vw, 2rem)',
           maxWidth: '1000px',
-          margin: '0 auto'
+          margin: '0 auto',
+          padding: '0 15px',
+          width: '100%',
+          boxSizing: 'border-box'
         }}>
           {technologies.map((tech, index) => (
             <div key={index} style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              padding: '2rem 1rem',
+              padding: 'clamp(1rem, 3vw, 2rem) clamp(0.5rem, 2vw, 1rem)',
               backgroundColor: 'white',
               borderRadius: '15px',
               boxShadow: '0 5px 15px rgba(0, 0, 0, 0.1)',
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              minHeight: '120px'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-5px)';
@@ -121,17 +125,18 @@ export default function TechStack() {
                 src={tech.icon}
                 alt={tech.name}
                 style={{
-                  width: '48px',
-                  height: '48px',
-                  marginBottom: '1rem',
+                  width: 'clamp(36px, 8vw, 48px)',
+                  height: 'clamp(36px, 8vw, 48px)',
+                  marginBottom: 'clamp(0.5rem, 2vw, 1rem)',
                   objectFit: 'contain'
                 }}
               />
               <span style={{
                 fontWeight: '600',
                 color: 'var(--color-black)',
-                fontSize: '1rem',
-                textAlign: 'center'
+                fontSize: 'clamp(0.85rem, 2vw, 1rem)',
+                textAlign: 'center',
+                lineHeight: '1.2'
               }}>
                 {tech.name}
               </span>
@@ -140,15 +145,16 @@ export default function TechStack() {
         </div>
 
         <div style={{
-          marginTop: '4rem',
+          marginTop: 'clamp(2rem, 5vw, 4rem)',
           textAlign: 'center',
-          padding: '3rem',
+          padding: 'clamp(1.5rem, 4vw, 3rem)',
           backgroundColor: 'white',
           borderRadius: '15px',
-          boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)'
+          boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
+          margin: 'clamp(2rem, 5vw, 4rem) 10px 0'
         }}>
           <h3 style={{
-            fontSize: '1.5rem',
+            fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
             marginBottom: '1rem',
             color: 'var(--color-black)'
           }}>
@@ -159,9 +165,12 @@ export default function TechStack() {
             opacity: '0.7',
             marginBottom: '2rem',
             maxWidth: '500px',
-            margin: '0 auto 2rem auto'
+            margin: '0 auto 2rem auto',
+            fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+            lineHeight: '1.6',
+            padding: '0 10px'
           }}>
-            We provide consultancy for other technologies and can connect you with our 
+            We provide consultancy for other technologies and can connect you with our
             specialized partner companies for technologies outside our core expertise.
           </p>
           <a href="#partners" className="btn btn-secondary">

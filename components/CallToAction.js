@@ -24,12 +24,12 @@ export default function CallToAction() {
           Book a free consultation call with our experts.
         </p>
 
-        <div style={{
+        <div className="flex-mobile-column" style={{
           display: 'flex',
-          gap: '20px',
+          gap: 'clamp(15px, 3vw, 20px)',
           justifyContent: 'center',
           flexWrap: 'wrap',
-          marginBottom: '3rem'
+          marginBottom: 'clamp(2rem, 4vw, 3rem)'
         }}>
           <a 
             href="https://calendly.com/xaonic" 
@@ -62,31 +62,48 @@ export default function CallToAction() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '2rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gap: 'clamp(1rem, 3vw, 2rem)',
           maxWidth: '800px',
-          margin: '0 auto'
+          margin: '0 auto',
+          padding: '0 10px'
         }}>
           <div style={{
-            padding: '2rem',
+            padding: 'clamp(1.5rem, 3vw, 2rem)',
             backgroundColor: 'rgba(255, 255, 255, 0.1)',
             borderRadius: '10px',
             backdropFilter: 'blur(10px)'
           }}>
-            <h3 style={{ marginBottom: '1rem', color: 'var(--color-purple)' }}>Free Consultation</h3>
-            <p style={{ opacity: '0.9' }}>
+            <h3 style={{
+              marginBottom: '1rem',
+              color: 'var(--color-purple)',
+              fontSize: 'clamp(1.1rem, 2.5vw, 1.3rem)'
+            }}>Free Consultation</h3>
+            <p style={{
+              opacity: '0.9',
+              fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+              lineHeight: '1.6'
+            }}>
               30-minute strategy session to understand your needs and provide initial recommendations.
             </p>
           </div>
-          
+
           <div style={{
-            padding: '2rem',
+            padding: 'clamp(1.5rem, 3vw, 2rem)',
             backgroundColor: 'rgba(255, 255, 255, 0.1)',
             borderRadius: '10px',
             backdropFilter: 'blur(10px)'
           }}>
-            <h3 style={{ marginBottom: '1rem', color: 'var(--color-blue)' }}>Quick Response</h3>
-            <p style={{ opacity: '0.9' }}>
+            <h3 style={{
+              marginBottom: '1rem',
+              color: 'var(--color-blue)',
+              fontSize: 'clamp(1.1rem, 2.5vw, 1.3rem)'
+            }}>Quick Response</h3>
+            <p style={{
+              opacity: '0.9',
+              fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+              lineHeight: '1.6'
+            }}>
               We respond to all inquiries as soon as possible with a detailed project proposal.
             </p>
           </div>

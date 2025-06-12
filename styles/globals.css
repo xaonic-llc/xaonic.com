@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+/* Prevent horizontal overflow on all elements */
+*, *::before, *::after {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
 :root {
   --color-black: #000000;
   --color-purple: #E0C0FC;
@@ -16,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -23,6 +30,16 @@ body {
   line-height: 1.6;
   color: var(--color-black);
   background-color: #ffffff;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+}
+
+/* Ensure all main elements respect viewport width */
+main, section, div {
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,6 +51,8 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section {
@@ -113,22 +132,181 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
 }
 
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
 @media (max-width: 1024px) {
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container {
+    padding: 0 25px;
   }
 }
 
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
+    max-width: 100%;
   }
 
   .section {
-    padding: 60px 0;
+    padding: 50px 0;
   }
 
   .grid-3 {
     grid-template-columns: 1fr;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    padding: 14px 20px;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .card {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Prevent horizontal overflow */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+    max-width: 100vw;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .btn {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card {
+    padding: 15px;
+    width: 100%;
+  }
+
+  /* Ensure proper spacing on very small screens */
+  .grid {
+    gap: 15px;
+  }
+}
+
+/* iPhone 13 and similar devices (390px width) */
+@media (max-width: 390px) {
+  .container {
+    padding: 0 10px;
+    max-width: 100vw;
+  }
+
+  .btn {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .grid {
+    gap: 12px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .section {
+    padding: 30px 0;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile-first responsive utilities */
+.flex-mobile-column {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .flex-mobile-column {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Ensure images are responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Better text readability on mobile */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+  }
+
+  /* Improve touch targets */
+  a, button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Better spacing for mobile */
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+
+  .mb-6 {
+    margin-bottom: 2rem;
+  }
+
+  .mt-4 {
+    margin-top: 1.5rem;
+  }
+
+  /* Ensure flex containers don't overflow */
+  .flex-mobile-column {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Ensure all sections fit within viewport */
+  section {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 }
