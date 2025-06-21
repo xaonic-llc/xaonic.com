@@ -63,7 +63,7 @@ export default function StructuredData() {
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "email": "hello@xaonic.com",
+      "email": "info@xaonic.com",
       "availableLanguage": ["English"],
       "hoursAvailable": {
         "@type": "OpeningHoursSpecification",

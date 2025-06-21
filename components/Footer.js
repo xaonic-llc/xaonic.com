@@ -31,14 +31,14 @@ export default function Footer() {
             </p>
             <div style={{ display: 'flex', gap: '1rem' }}>
               <a
-                href="mailto:hello@xaonic.com"
+                href="mailto:info@xaonic.com"
                 style={{
                   color: 'var(--color-purple)',
                   textDecoration: 'none',
                   fontWeight: '500'
                 }}
               >
-                hello@xaonic.com
+                info@xaonic.com
               </a>
             </div>
           </div>

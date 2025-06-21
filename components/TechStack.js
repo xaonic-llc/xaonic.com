@@ -1,5 +1,6 @@
 export default function TechStack() {
   const technologies = [
+    // Backend Technologies
     {
       name: "Laravel",
       icon: "https://cdn.worldvectorlogo.com/logos/laravel-2.svg"
@@ -9,20 +10,12 @@ export default function TechStack() {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
     },
     {
-      name: "React",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      name: "Symfony",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg"
     },
     {
-      name: "Vue.js",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
-    },
-    {
-      name: "Next.js",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-    },
-    {
-      name: "TypeScript",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+      name: "Nest.js",
+      icon: "https://nestjs.com/img/logo-small.svg"
     },
     {
       name: "REST API",
@@ -32,6 +25,40 @@ export default function TechStack() {
       name: "GraphQL",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
     },
+    // Frontend Technologies
+    {
+      name: "React",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+    },
+    {
+      name: "Next.js",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+    },
+    {
+      name: "Vue.js",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+    },
+    {
+      name: "Nuxt.js",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg"
+    },
+    {
+      name: "TypeScript",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+    },
+    {
+      name: "HTML",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+    },
+    {
+      name: "CSS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+    },
+    {
+      name: "Tailwind CSS",
+      icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+    },
+    // Database Technologies
     {
       name: "MySQL",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
@@ -45,24 +72,17 @@ export default function TechStack() {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
     },
     {
+      name: "Redis",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+    },
+    // Cloud Technologies
+    {
       name: "AWS",
       icon: "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
     },
     {
       name: "GCP",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
-    },
-    {
-      name: "Tailwind CSS",
-      icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
-    },
-    {
-      name: "HTML",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-    },
-    {
-      name: "CSS",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
     }
   ];
 
@@ -90,12 +110,13 @@ export default function TechStack() {
         </div>
 
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
           gap: 'clamp(0.8rem, 3vw, 2rem)',
           maxWidth: '1000px',
           margin: '0 auto',
-          padding: '0 15px',
+          padding: '0 15px clamp(1.5rem, 4vw, 3rem) 15px',
           width: '100%',
           boxSizing: 'border-box'
         }}>
@@ -110,7 +131,9 @@ export default function TechStack() {
               boxShadow: '0 5px 15px rgba(0, 0, 0, 0.1)',
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
               cursor: 'pointer',
-              minHeight: '120px'
+              minHeight: '120px',
+              width: 'clamp(120px, 15vw, 160px)',
+              flex: '0 0 auto'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-5px)';
@@ -151,7 +174,7 @@ export default function TechStack() {
           backgroundColor: 'white',
           borderRadius: '15px',
           boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
-          margin: 'clamp(2rem, 5vw, 4rem) 10px 0'
+          margin: 'clamp(2rem, 5vw, 4rem) 10px clamp(2rem, 5vw, 3rem) 10px'
         }}>
           <h3 style={{
             fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',

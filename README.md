@@ -124,4 +124,4 @@ This project is proprietary and confidential.
 
 ## Support
 
-For questions or support, contact: hello@xaonic.com
+For questions or support, contact: info@xaonic.com
