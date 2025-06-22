@@ -12,7 +12,7 @@ export default function CallToAction() {
         }}>
           Ready to Build Something Amazing?
         </h2>
-        
+
         <p style={{
           fontSize: '1.2rem',
           marginBottom: '2rem',
@@ -20,7 +20,7 @@ export default function CallToAction() {
           maxWidth: '600px',
           margin: '0 auto 2rem auto'
         }}>
-          Let's discuss your project and explore how we can help you achieve your goals. 
+          Let's discuss your project and explore how we can help you achieve your goals.
           Book a free consultation call with our experts.
         </p>
 
@@ -31,9 +31,9 @@ export default function CallToAction() {
           flexWrap: 'wrap',
           marginBottom: 'clamp(2rem, 4vw, 3rem)'
         }}>
-          <a 
-            href="https://calendly.com/xaonic" 
-            target="_blank" 
+          <a
+            href="https://calendly.com/xaonic-info/30min"
+            target="_blank"
             rel="noopener noreferrer"
             className="btn"
             style={{
@@ -45,8 +45,8 @@ export default function CallToAction() {
           >
             Book a Meeting
           </a>
-          <a 
-            href="#contact" 
+          <a
+            href="#contact"
             className="btn"
             style={{
               backgroundColor: 'transparent',
