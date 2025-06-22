@@ -32,7 +32,7 @@ export default function ContactForm() {
     setSubmitStatus('');
 
     try {
-      const response = await fetch('https://xaonic-api.rana7cse.workers.dev/api/contact', {
+      const response = await fetch('https://api.xaonic.com/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -317,7 +317,7 @@ export default function ContactForm() {
                 <div>
                   <h4 style={{ marginBottom: '0.25rem', color: 'var(--color-black)' }}>Email</h4>
                   <p style={{ color: 'var(--color-black)', opacity: '0.7', margin: 0 }}>
-                    hello@xaonic.com
+                    info@xaonic.com
                   </p>
                 </div>
               </div>
