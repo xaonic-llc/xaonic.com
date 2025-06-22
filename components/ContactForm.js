@@ -29,20 +29,36 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        projectType: '',
-        budget: '',
-        message: ''
+    setSubmitStatus('');
+
+    try {
+      const response = await fetch('https://xaonic-api.rana7cse.workers.dev/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-    }, 2000);
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          projectType: '',
+          budget: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -266,7 +282,20 @@ export default function ContactForm() {
                   borderRadius: '5px',
                   textAlign: 'center'
                 }}>
-                  Thank you! We'll get back to you within 24 hours.
+                  Thank you! We'll get back to you as soon as possible.
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div style={{
+                  marginTop: '1rem',
+                  padding: '1rem',
+                  backgroundColor: '#f8d7da',
+                  color: '#721c24',
+                  borderRadius: '5px',
+                  textAlign: 'center'
+                }}>
+                  Sorry, there was an error sending your message. Please try again or contact us directly at hello@xaonic.com.
                 </div>
               )}
             </form>
@@ -322,7 +351,7 @@ export default function ContactForm() {
               }}>
                 What Happens Next?
               </h3>
-              
+
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <div style={{ display: 'flex', alignItems: 'flex-start' }}>
                   <DescriptionIcon style={{
