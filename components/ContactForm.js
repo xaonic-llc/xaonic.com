@@ -32,7 +32,9 @@ export default function ContactForm() {
     setSubmitStatus('');
 
     try {
-      const response = await fetch('https://api.xaonic.com/contact', {
+      const apiUrl = 'https://xaonic-api.rana7cse.workers.dev';
+
+      const response = await fetch(`${apiUrl}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
