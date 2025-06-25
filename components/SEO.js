@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 export default function SEO({
   title = "Xaonic - Expert Web Development | MVP, SaaS & Shopify Apps",
-  description = "🚀 Transform your startup ideas into digital reality with Xaonic. Expert web development, API development, MVP development & team augmentation for US and European clients. 10+ years experience with Laravel, Node.js, React, Vue.js. Serving Netherlands, Germany, Belgium, France, UK & USA.",
+  description = "Transform your startup ideas into digital reality with Xaonic. Expert web development, API development, MVP development & team augmentation for US and European clients. 10+ years experience with Laravel, Node.js, React, Vue.js. Serving Netherlands, Germany, Belgium, France, UK & USA.",
   keywords = "web development, API development, build MVP, team augmentation, custom software development, web development company USA, web development Netherlands, web development Europe, Laravel development, Node.js development, React development, Vue.js development, SaaS development, Shopify apps, startup development, software development outsourcing, remote development team, web development services, API integration, REST API development, GraphQL development, database development, full stack development, frontend development, backend development, mobile app development, e-commerce development, digital transformation, software consulting, agile development, DevOps services, cloud development, web application development, progressive web apps, microservices development, scalable web solutions, enterprise web development",
   image = "https://xaonic.com/cover-x.png",
   url = "https://xaonic.com/",
@@ -76,6 +76,17 @@ export default function SEO({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:image:alt" content="Xaonic - Web Development Company specializing in MVP, SaaS and Shopify Apps" />
+
+      {/* Google tag (gtag.js) */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZZHPRK1JJ"></script>
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-MZZHPRK1JJ');
+        `
+      }} />
     </Head>
   );
 }
